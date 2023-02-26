@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -16,6 +15,12 @@
       "es2018",
       "dom"
     ],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "event-bus-mf-demo": [
+        "dist/event-bus-mf-demo/event-bus",
+        "dist/event-bus-mf-demo"
+      ]
+    }
   }
 }

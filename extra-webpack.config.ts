@@ -17,8 +17,9 @@ export default {
         '@angular/material': { eager: true },
         '@angular/material/': { eager: true },
         rxjs: { eager: true },
-        'rxjs/': { eager: true }
-      }
-    })
-  ]
+        'rxjs/': { eager: true },
+        'event-bus-mf-demo': { eager: true, singleton: true },
+      },
+    }),
+  ],
 } as webpack.Configuration;

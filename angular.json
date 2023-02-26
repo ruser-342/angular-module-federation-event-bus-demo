@@ -351,6 +351,46 @@
           }
         }
       }
+    },
+    "event-bus-mf-demo": {
+      "projectType": "library",
+      "root": "projects/event-bus-mf-demo",
+      "sourceRoot": "projects/event-bus-mf-demo/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/event-bus-mf-demo/tsconfig.lib.json",
+            "project": "projects/event-bus-mf-demo/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/event-bus-mf-demo/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/event-bus-mf-demo/src/test.ts",
+            "tsConfig": "projects/event-bus-mf-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/event-bus-mf-demo/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/event-bus-mf-demo/tsconfig.lib.json",
+              "projects/event-bus-mf-demo/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-module-federation",

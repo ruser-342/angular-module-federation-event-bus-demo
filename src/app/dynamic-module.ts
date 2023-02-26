@@ -17,7 +17,6 @@ declare const __webpack_share_scopes__: { default: Scope };
  */
 export async function loadRemoteModule<T>(remoteEntryUrl: string, remoteName: string, moduleName: string): Promise<any> {
   await loadRemoteEntry(remoteEntryUrl);
-  await loadRemoteEntry(remoteEntryUrl);
 
   // initialize default scope
   await __webpack_init_sharing__('default');

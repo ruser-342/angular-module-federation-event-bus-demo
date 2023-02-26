@@ -1,11 +1,8 @@
-<mat-toolbar color="primary"
-             class="mat-elevation-z2">
-  Angular Module Federation Demo
-  <span style="flex-grow: 1"></span>
-  <a routerLink="cities" mat-button>Cities</a>
-  <a routerLink="cathedrals" mat-button>Cathedrals</a>
-</mat-toolbar>
-
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="wrap">
+  <mat-toolbar color="primary" class="mat-elevation-z2 title">
+    Angular Module Federation Event Bus Demo
+  </mat-toolbar>
+  <mat-card class="card">
+    <ng-template #componentContainer></ng-template>
+  </mat-card>
 </div>

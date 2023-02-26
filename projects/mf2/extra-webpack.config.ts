@@ -11,21 +11,21 @@ export default {
       library: { type: 'var', name: 'mf2' },
       filename: 'remoteEntry.js',
       exposes: {
-        Module: './projects/mf2/src/app/city/city.module.ts'
+        Module: './projects/mf2/src/app/mf2/mf2.module.ts',
       },
-      shared: [
-        '@angular/core',
-        '@angular/core',
-        '@angular/common',
-        '@angular/common/',
-        '@angular/router',
-        '@angular/cdk',
-        '@angular/cdk/',
-        '@angular/material',
-        '@angular/material/',
-        'rxjs',
-        'rxjs/'
-      ]
-    })
-  ]
+      shared: {
+        '@angular/core': { eager: true },
+        '@angular/common': { eager: true },
+        '@angular/common/': { eager: true },
+        '@angular/router': { eager: true },
+        '@angular/cdk': { eager: true },
+        '@angular/cdk/': { eager: true },
+        '@angular/material': { eager: true },
+        '@angular/material/': { eager: true },
+        rxjs: { eager: true },
+        'rxjs/': { eager: true },
+        'event-bus-mf-demo': { eager: true, singleton: true },
+      },
+    }),
+  ],
 } as webpack.Configuration;
